@@ -11,14 +11,17 @@ pipeline {
         stage('Test') {
             steps {
                
-               // bat 'npm  test'
+                bat 'npx test'
                 bat 'npm  test1'
-                bat 'npx sails lift'
+                bat 'START /B npm sails lift'
+                bat 'npx cypress run'
+                
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                
+                
             }
         }
     }
