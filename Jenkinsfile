@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+               npm install
             }
         }
         stage('Test') {
             steps {
                 npm Test
-                run cypress
+            
             }
         }
         stage('Deploy') {
@@ -21,5 +21,3 @@ pipeline {
     }
 }
 
-//ddd
-//2
