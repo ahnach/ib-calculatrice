@@ -13,7 +13,7 @@ pipeline {
                
                 bat 'npm test'
                 bat 'npm run-script test1'
-                junit 'test-example.xml'
+               // junit 'test-example.xml'
                 bat 'START /B npm sails lift'
                 bat 'npx cypress run'
                 
