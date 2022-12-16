@@ -12,11 +12,8 @@ pipeline {
             steps {
                
                 bat 'npm test'
-                bat 'npm run-script test1'
-                //junit 'test-results.xml'
-                bat 'START /B npm sails lift'
+                junit 'test-results.xml'
                 bat 'npm run cypress'
-                
             }
         }
         stage('Deploy') {
