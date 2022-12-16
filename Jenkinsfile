@@ -5,13 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                bat 'npm install'
-               bat 'cypress run'
+               
             }
         }
         stage('Test') {
             steps {
-                npm test
-                
+                bat 'cypress run'
+                bat 'npm test'
+                bat 'npm test1'
             
             }
         }
