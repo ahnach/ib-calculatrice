@@ -4,8 +4,8 @@ const cypress = require('cypress')
 var sails = require('sails');
 
 sails.lift({
-  hooks: {grunt: false},
-  log: {level: 'warn'},
+  hooks: { grunt: false },
+  log: { level: 'warn' },
 
 }, function () {
 

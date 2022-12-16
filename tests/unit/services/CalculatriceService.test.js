@@ -61,21 +61,21 @@ describe('CalculatriceService', function () {
 
                 let result = CalculatriceService.puissance(a, b)
                 assert.equal(result, 27);
-                stub
                 return done();
             })
-            it('should call multiplier', function (done) {
-                let a = 3;
-                let b = 3;
-                let spy = sinon.spy(CalculatriceService, multiplier)
-
-                let result = CalculatriceService.puissance(a, b)
-                assert.equal(spy.callcount, 2);
-
-                return done();
+            describe('#multiplier()', function () {
+                it('should call multiplier', function (done) {
+                    let a = 3;
+                    let b = 3;
+                    //let spy = sinon.spy(CalculatriceService, multiplier)
+                    let result = CalculatriceService.multiplier(a, b)
+                    assert.equal(result, 9);
+                    return done();
+                })
             })
 
         })
+
     })
 
 
