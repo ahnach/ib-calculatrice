@@ -11,8 +11,8 @@ pipeline {
         stage('Test') {
             steps {
                 bat 'cypress run'
-                bat 'npm test'
-                bat 'npm test1'
+                bat 'npm run test'
+                bat 'npm run test1'
             
             }
         }
