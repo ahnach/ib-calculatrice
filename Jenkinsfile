@@ -14,12 +14,13 @@ pipeline {
                 bat 'npm test'
                 bat 'npm run cypress'
             }
-        }
-            post {
-                always {
+             post {
+            
                       junit 'test-results.xml'
-                }
+                
             }
+        }
+           
         stage('Deploy') {
             steps {
                 echo ' deploy...'
