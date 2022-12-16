@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                
-                bat 'npx test'
+                bat 'npm test'
                 bat 'npm run-script test1'
                 junit 'test-example.xml'
                 bat 'START /B npm sails lift'
