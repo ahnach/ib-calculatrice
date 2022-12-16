@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                npm Test
+                
             
             }
         }
