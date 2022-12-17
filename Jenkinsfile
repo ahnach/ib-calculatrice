@@ -14,11 +14,7 @@ pipeline {
                 bat 'npm test'
                 bat 'npm run cypress'
             }
-             post {
-                always {
-                      junit 'test-results.xml'
-                
-            }
+             
         }
            
         stage('Deploy') {
